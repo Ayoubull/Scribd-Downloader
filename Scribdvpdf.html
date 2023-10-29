@@ -531,10 +531,6 @@ font-size: 16px;
 </header>  
 
   <b:if cond='data:blog.url == data:blog.homepageUrl'>
-  <!-- هذا الجزء سيظهر في الصفحة الرئيسية فقط -->
-
-  
-  
 
   
   <div class='info' id='Get-Started'> 
@@ -738,7 +734,7 @@ font-size: 16px;
 
       // Update the browser's address bar with the new URL
       const { documentNumber, pageTitle } = parseScribdLink(inputLink);
-      const myWebsiteLink = `https://scribdvpdf.blogspot.com/p/9yrcj.html?doc=${documentNumber}&title=${pageTitle}`;
+      const myWebsiteLink = `https://scribdvpdf.blogspot.com/?doc=${documentNumber}&title=${pageTitle}`;
       window.history.pushState({}, null, myWebsiteLink); // Update URL without refreshing the page
     } else {
       // Invalid link format or empty input

@@ -47,4 +47,4 @@ and remlace js script a line 310
 
 /*]]>*/</script>
 ```
-### or upload the script aggregated to your host
+### or upload the script aggregated to your host, if is supported

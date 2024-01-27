@@ -23,8 +23,9 @@ How to use a Scribd downloader
 Choose a Scribd downloader and download it to your computer or device.
 Open the Scribd downloader and enter the URL of the Scribd document that you want to download.
 Click the "Download" button.
+The Scribd downloader will download the document to your computer or device.
 
-###  how to setup this script a your host
+###  how to setup this script a your webhost
 please add style script a line 6 , remplaced a this
 ```
 <b:skin><![CDATA[
@@ -46,5 +47,3 @@ and remlace js script a line 310
 
 /*]]>*/</script>
 ```
-
-The Scribd downloader will download the document to your computer or device.

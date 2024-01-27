@@ -1,1 +1,859 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:js='true' b:layoutsVersion='3' b:render='true' b:responsive='true' b:templateUrl='https://scribdvpdf.blogspot.com' b:templateVersion='2.9' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'><b:attr name='xmlns' value=''/><b:attr name='xmlns:b' value=''/><b:attr name='xmlns:expr' value=''/><b:attr name='xmlns:data' value=''/><head>
+<b:include data='blog' name='JetAll-head-content'/>
 
+<b:skin><![CDATA[
+
+[!] Find (JetAll-head-content) to edit Open Graph and other Meta Tags
+
+---------------------------
+# Scribdvpdf v1.2 Setting #
+---------------------------
+
+<Variable name="tagline" description="Tagline" type="string" value="Scribdvpdf"/>
+[!] Homepage tagline, ex: BlogName - Tagline
+
+<Variable name="separator" description="Separator" type="string" value=" - "/>
+[!] Title separator ( – ), ( | ), ( • )
+
+<Variable name="description" description="Description" type="string" value="Scribd download for free"/>
+[!] Default meta description, recommended 155–160 characters
+
+<Variable name="cover" description="Cover" type="string" value=""/>
+[!] Default meta image, size recommended 1600x700 px
+
+<Variable name="logo" description="Logo" type="string" value=""/>
+[!] Schema logo, size recommended 175x55 px
+
+<Variable name="favicon" description="Favicon" type="string" value=""/>
+[!] Favicon high resolution, required format (.png), min size 200x200 px
+
+<Variable name="analyticId" description="Analytic ID" type="string" value=""/>
+[!] New Google Analytic 2021
+
+<Variable name="caPubAdsense" description="caPubAdsense ID" type="string" value=""/> 
+[!] number only
+
+<Variable name="autoTOC" description="Table of content" type="string" value="true"/>
+[!] true or false
+
+<Variable name="positionTOC" description="Position TOC" type="string" value="noscript"/>
+[!] tag name, class, id
+
+<Variable name="maxLabel" description="Limit Label" type="string" value="3"/>
+[!] Limit Label Display
+
+-------------------------
+# JetTheme Css Variable #
+-------------------------
+
+<Group description="_Main Color">
+<Variable name="keycolor" description="Main Color" type="color" default="#f67938" value="#00ab6b"/>
+<Variable name="body.background" description="Body Background Color" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="body.text.color" description="Font Color" type="color" default="#686868" value="#686868"/>
+<Variable name="posts.title.color" description="Heading Color" type="color" default="#343a40" value="#000000"/>
+<Variable name="body.link.color" description="Link Color" type="color" default="$(keycolor)" value="#00ab6b"/>
+<Variable name="body.hover.color" description="Link Hover" type="color" default="#f46013" value="#00ab6b"/>
+<Variable name="border.color" description="Border Color" type="color" default="#efefef" value="#efefef"/>
+<Variable name="posts.text.color" description="Blockquote Border Color" type="color" default="$(keycolor)" value="#555511"/>
+</Group>
+
+<Group description="_Typography">
+<Variable name="body.text" description="Body Font" type="font" default="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+<Variable name="posts.title" description="Heading Font" type="font" default="normal bold 40px var(--bs-font-sans-serif)" value="normal bold 40px var(--bs-font-sans-serif)"/>
+<Variable name="title.h2" description="H2 Size" type="length" default="26px" min="12px" max="50px" value="26px"/>
+<Variable name="title.h3" description="H3 Size" type="length" default="22px" min="12px" max="50px" value="22px"/>
+<Variable name="title.h4" description="H4 Size" type="length" default="20px" min="12px" max="50px" value="20px"/>
+<Variable name="title.h5" description="H5 Size" type="length" default="18px" min="12px" max="50px" value="18px"/>
+<Variable name="title.h6" description="H6 Size" type="length" default="16px" min="12px" max="50px" value="16px"/>
+</Group> 
+
+<Group description="_Logo">
+<Variable name="logo.width" description="Logo Max Width" type="length" default="200px" min="50px" max="500px" value="200px"/>
+<Variable name="logo.width.mobile" description="Logo Max Width (mobile)" type="length" default="150px" min="50px" max="500px" value="150px"/>
+</Group>
+
+<Group description="_Header Color">
+<Variable name="header.bg" description="Background" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="header.color" description="Font Color " type="color" default="#686868" value="#686868"/>
+<Variable name="header.border" description="Border Color" type="color" default="#efefef" value="#efefef"/>
+</Group>
+
+<Group description="_Menu">
+<Variable name="tabs.font" description="Menu Font" type="font" default="normal bold 16px var(--bs-font-sans-serif)" value="normal bold 16px var(--bs-font-sans-serif)"/>
+<Variable name="tabs.color" description="Font Color" type="color" default="$(body.text.color)" value="#686868"/>
+<Variable name="tabs.hover" description="Font Hover" type="color" default="$(keycolor)" value="#008553"/>
+<Variable name="tabs.selected.color" description="Font Selected" type="color" default="$(keycolor)" value="#008553"/>
+</Group>
+
+<Group description="_Dropdown Menu">
+<Variable name="dropdown.font" description="Font Size" type="length" default="16px" min="12px" max="50px" value="15px"/>
+<Variable name="dropdown.bg" description="Background Color" type="color" default="$(body.text.color)" value="#ffffff"/>
+<Variable name="dropdown.color" description="Font Color" type="color" default="$(keycolor)" value="#686868"/>
+<Variable name="dropdown.hover" description="Font Hover" type="color" default="$(keycolor)" value="#00ab6b"/>
+<Variable name="dropdown.selected" description="Dropdown Selected Color" type="color" default="$(keycolor)" value="#0da06a"/>
+</Group>
+
+<Group description="_Footer Color">
+<Variable name="footer.bg" description="Background Color" type="color" default="#212529" value="#212529"/>
+<Variable name="footer.color" description="Font Color" type="color" default="#9fa6ad" value="#9fa6ad"/>
+<Variable name="footer.link" description="Link Color" type="color" default="#9fa6ad" value="#9fa6ad"/>
+<Variable name="footer.border" description="Border Color" type="color" default="#323539" value="#323539"/>
+</Group>
+
+<Group description="_Socket Color">
+<Variable name="socket.bg" description="Background Color" type="color" default="#09080c" value="#09080c"/>
+<Variable name="socket.color" description="Font Color" type="color" default="#9fa6ad" value="#9fa6ad"/>
+</Group>
+
+<Group description="_Button">
+<Variable name="posts.icons.color" description="Button Color" type="color" default="$(keycolor)" value="#00ab6b"/>
+<Variable name="labels.background.color" description="Button Hover"  type="color"  default="#f46013" value="#159667"/>
+</Group>
+
+<Group description="_Comment Form">
+<Variable name="body.text.font" description="Font" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+<Variable name="posts.background.color" description="Background" type="color" default="transparent" value="rgba(0,0,0,0)"/>
+</Group>
+*/
+/*
+
+  -----------------------------------------------
+Name : Scribd Downloader Scribdvpdf Template
+Designer URL  : https://scribdvpdf.blogspot.com/
+year          : 2023
+----------------------------------------------- */
+
+*/
+
+.infonh7h{
+
+}
+
+:root{--bs-font-sans-serif:$(body.text.family);--bs-body-bg:$(body.background);--bs-body-color:$(body.text.color);--jt-primary:$(keycolor);--jt-heading-color:$(posts.title.color);--jt-heading-link:$(posts.title.color);--jt-heading-hover:$(keycolor);--jt-link-color:$(body.link.color);--jt-link-hover:$(body.hover.color);--jt-blockquote:$(posts.text.color);--jt-btn-primary:$(posts.icons.color);--jt-btn-primary-hover:$(labels.background.color);--jt-btn-light-hover:$(posts.title.color);--jt-border-light:$(border.color);--jt-bg-light:#f3f7f9;--jt-archive-bg:#fff;--jt-nav-color:$(tabs.color);--jt-nav-hover:$(tabs.hover);--jt-nav-selected:$(tabs.selected.color);--jt-dropdown-bg:$(dropdown.bg);--jt-dropdown-color:$(dropdown.color);--jt-dropdown-hover:$(dropdown.hover);--jt-dropdown-selected:$(dropdown.selected);--jt-header-bg:$(header.bg);--jt-header-color:$(header.color);--jt-header-border:$(header.border);--jt-footer-bg:$(footer.bg);--jt-footer-color:$(footer.color);--jt-footer-link:$(footer.link);--jt-footer-border:$(footer.border);--jt-socket-bg:$(socket.bg);--jt-socket-color:$(socket.color)}.dark-mode{--bs-body-bg:hsl(210,11%,15%);--bs-body-color:hsl(210,11%,80%);--jt-heading-color:hsl(210,11%,80%);--jt-heading-link:hsl(210,11%,80%);--jt-btn-light-hover:hsl(210,11%,85%);--jt-border-light:hsl(210,11%,20%);--jt-bg-light:hsl(210,11%,20%);--jt-archive-bg:hsl(210,11%,17%);--jt-nav-color:hsl(210,11%,70%);--jt-dropdown-bg:hsl(210,11%,18%);--jt-dropdown-color:hsl(210,11%,70%);--jt-header-bg:hsl(210,11%,15%);--jt-header-color:hsl(210,11%,80%);--jt-header-border:hsl(210,11%,20%);--jt-footer-bg:hsl(210,11%,15%);--jt-footer-color:hsl(210,11%,80%);--jt-footer-border:hsl(210,11%,20%);--jt-socket-bg:hsl(210,11%,17%);--jt-socket-color:hsl(210,11%,80%)}body{font:$(body.text);color:var(--bs-body-color);background-color:var(--bs-body-bg);line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}.d-block{display:none}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font:$(posts.title)}a{transition-property:background-color,border-color,color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;text-decoration:none;color:var(--jt-link-color)}a:hover{color:var(--jt-link-hover)}.fs-7{font-size:.875rem}.fs-8{font-size:.75rem}.fs-9{font-size:.7rem}.btn{box-shadow:none!important}.btn-sm{min-width:32px;min-height:32px}img,svg,iframe{max-width:100%}img{height:auto;object-fit:cover}label{cursor:pointer}.visually-hidden{position:unset!important}.form-control:focus{box-shadow:none;border-color:var(--jt-primary)}.form-control::placeholder{opacity:.5}.dropdown-toggle::after{border-width:.25em .25em 0}.dropdown-menu{margin:0;padding:0}.px-3{padding-right:1rem;padding-left:1rem}.ratio:before{content:none}.ratio-1x1{padding-bottom:100%}.ratio-4x3{padding-bottom:75%}.ratio-16x9{padding-bottom:56.25%}.ratio-21x9{padding-bottom:43%}.object-cover{object-fit:cover}.jt-text-primary,.hover-text-primary:hover,input:checked~.check-text-primary{color:var(--jt-primary)!important}.jt-btn-primary,.jt-btn-outline-primary:hover{color:#fff;background-color:var(--jt-btn-primary);border-color:var(--jt-btn-primary)}.jt-btn-light{color:var(--bs-body-color);background-color:var(--jt-bg-light);border-color:var(--jt-bg-light)}.jt-btn-light:hover{color:var(--jt-btn-light-hover)}.jt-btn-primary:hover,.hover-btn-primary:hover,input:checked+.jt-btn-outline-primary{color:#fff!important;background-color:var(--jt-btn-primary-hover)!important;border-color:var(--jt-btn-primary-hover)!important}.jt-btn-outline-primary{color:var(--jt-btn-primary);border-color:var(--jt-btn-primary)}.jt-bg-primary{background-color:var(--jt-primary)}.jt-bg-light{background-color:var(--jt-bg-light)}.bg-archive{background-color:var(--jt-archive-bg)}.jt-border-light{border-color:var(--jt-border-light)!important}input:checked~.d-block-check{display:block!important}input:checked~.d-none-check{display:none!important}.dropdown-menu,.accordion-item,.accordion-header{background-color:var(--bs-body-bg);color:var(--bs-body-color);border-color:var(--jt-border-light)}.lazyload{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;opacity:0}.lazyload.loaded{opacity:1}pre{background-color:var(--jt-bg-light);margin-bottom:1rem;padding:1rem;font-size:.75rem}blockquote{border-left:5px solid var(--jt-blockquote);color:inherit;font-size:1.125rem;margin-bottom:1.5rem;margin-top:1.5rem;padding-left:1rem}.header-animate.header-hidden{transform:translateY(-100%);box-shadow:none!important}#header{background-color:var(--jt-header-bg);color:var(--jt-header-color);transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;min-height:50px;border-bottom:1px solid var(--jt-header-border)}.header-social{border-right:1px solid var(--jt-header-border)}.jt-icon{display:inline-block;height:1em;vertical-align:-.15em;width:1em;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}.jt-icon-center{font-family:sans-serif}.icon-dark,.dark-mode .icon-light{display:none}.dark-mode .icon-dark{display:block}#dark-toggler,#search-toggler,#navbar-toggler{line-height:1}#dark-toggler{font-size:17px}#footer{background-color:var(--jt-footer-bg);color:var(--jt-footer-color);border-top:1px solid var(--jt-footer-border)}#socket{background-color:var(--jt-socket-bg);color:var(--jt-socket-color)}#navbar{z-index:9999}#navbar .menu-item{position:relative}#navbar .nav-link{min-height:40px}#navbar .dropdown-toggle{cursor:pointer;align-items:center;display:flex}#navbar.d-block,#navbar .dropdown-menu,#navbar .nav-link,#navbar .dropdown-toggle{-webkit-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s}#navbar .navbar-nav>.menu-item>.nav-link{font:$(tabs.font);line-height:1.5;color:var(--jt-nav-color)}#navbar .navbar-nav>.menu-item:hover>.nav-link,#navbar .navbar-nav>.menu-item:hover>.dropdown-toggle{color:var(--jt-nav-hover)}#navbar .navbar-nav>.menu-item>.nav-link.active,#navbar .navbar-nav>.menu-item>.active~.dropdown-toggle{color:var(--jt-nav-selected)}.logo-wrap{width:$(logo.width)}#search-header .dropdown-menu{background-color:var(--jt-dropdown-bg);color:var(--jt-dropdown-color);border-color:var(--jt-header-border);min-width:300px;right:0;top:100%}.blog-admin{display:none}#pagination li+li{margin-left:5px}.no-items{display:none}.feature-image,.separator,.tr-caption-container{margin-bottom:1rem}.tr-caption-container{width:100%}.separator a,.tr-caption-container a{margin:0!important;padding:0!important}.tr-caption{font-size:12px;font-style:italic}.widget:last-child{margin-bottom:0!important}#post-body .widget{margin-top:1.5rem}.item-title{color:var(--jt-heading-link)}.item-title:hover{color:var(--jt-heading-hover)}#comment-editor{width:100%}#primary .widget-title{font-weight:300;text-transform:uppercase}#footer .widget-title{text-transform:uppercase}#footer .widget-title,#sidebar .widget-title{font-size:13px!important}#footer .widget-title:after{content:"";display:block;width:50px;border-bottom:2px solid var(--jt-primary);margin-top:10px}#primary .widget-title>span{background-color:var(--bs-body-bg);padding-right:5px;position:relative}#main .widget-title:before,#sidebar .widget-title:before{background-color:var(--jt-bg-light);content:"";height:1px;display:block;position:absolute;top:50%;transform:translateY(-50%);width:100%}#main .widget-title:before{border-right:30px solid var(--jt-primary);height:5px}.send-success:not(.loading) .contact-form-msg,.send-error:not(.loading) .contact-form-msg{display:block!important}.send-success .contact-form-msg{border-color:rgba(25,135,84,.3)!important}.send-error .contact-form-msg{border-color:rgba(255,193,7,.3)!important}.send-success .contact-form-msg:before{content:attr(data-success)}.send-error .contact-form-msg:before{content:attr(data-error)}hr.example-ads:before{content:"Advertisement here"}hr.example-ads{background-color:var(--jt-bg-light);border-radius:.25rem;font-size:.875rem;height:auto;margin:0;opacity:1;padding:1.5rem 0;text-align:center}body>.google-auto-placed{margin:0 auto 1.5rem;max-width:1108px}.google-auto-placed>ins{margin:0!important}.h1,h1{font-size:calc(1.375rem + 1.5vw)}.h2,h2{font-size:calc(1.325rem + .9vw)}.h3,h3{font-size:calc(1.3rem + .6vw)}.h4,h4{font-size:calc(1.275rem + .3vw)}.h5,h5{font-size:$(title.h5)}.h6,h6{font-size:$(title.h6)}.entry-title{color:var(--jt-heading-color)}.entry-text h1,.entry-text h2,.entry-text h3,.entry-text h4,.entry-text h5,.entry-text h6{color:var(--jt-heading-color);padding-top:1em;margin-bottom:1rem}.entry-text li{margin-bottom:.5rem}@media (min-width:576px){.ratio-sm-4x3{padding-bottom:75%}.ratio-sm-16x9{padding-bottom:56.25%}.border-sm-end{border-right-width:1px!important;border-right-style:solid}#post-pager .next-page{border-left:1px solid}}@media (min-width:768px){.position-md-relative{position:relative}.border-md-end{border-right-width:1px!important;border-right-style:solid}}@media (min-width:992px){.d-lg-flex{display:flex}.col-lg-4{flex:0 0 auto;width:33.33333333%}.col-lg-8{flex:0 0 auto;width:66.66666667%}.border-lg-end{border-right-width:1px!important;border-right-style:solid}#navbar .navbar-nav>.menu-item{display:flex}#navbar .dropdown-menu{background-color:var(--jt-dropdown-bg);border-color:var(--jt-header-border);margin-top:-10px;display:block;opacity:0;visibility:hidden;pointer-events:none;box-shadow:5px 10px 10px -5px rgba(0,0,0,.14);top:100%;min-width:150px}#navbar .dropdown-menu .nav-link{padding-right:20px;font-size:$(dropdown.font);color:var(--jt-dropdown-color)}#navbar .dropdown-menu .dropdown-toggle{position:absolute;right:10px;top:20px}#navbar .dropdown-menu .dropdown-menu{left:100%;top:-1px}#navbar .dropdown-menu .menu-item:hover>.nav-link,#navbar .dropdown-menu .menu-item:hover>.dropdown-toggle{color:var(--jt-dropdown-hover)}#navbar .dropdown-menu .menu-item>.nav-link.active,#navbar .dropdown-menu .menu-item>.active~.dropdown-toggle{color:var(--jt-dropdown-selected)}#navbar .menu-item:hover>.dropdown-menu{opacity:1;visibility:visible;pointer-events:unset;margin:0}#navbar .navbar-nav>.menu-item>.nav-link{padding:1.5rem 1.2rem;white-space:nowrap}#navbar .navbar-nav>.menu-item>.dropdown-toggle{bottom:0;pointer-events:none;position:absolute;right:5px;top:3px}#sidebar{border-left:1px solid var(--jt-border-light)}#footer-widget .widget{margin-bottom:0!important}}@media (min-width:1200px){.container{max-width:1140px}.h1,h1{font-size:$(posts.title.size)}.h2,h2{font-size:$(title.h2)}.h3,h3{font-size:$(title.h3)}.h4,h4{font-size:$(title.h4)}}@media (min-width:1400px){.container{max-width:1320px}}@media (max-width:991.98px){input:checked~.dropdown-menu{display:block}input:checked+.dropdown-toggle{color:var(--jt-dropdown-selected)}.logo-wrap{width:$(logo.width.mobile)}#search-header .dropdown-menu{width:100%}#navbar{background-color:var(--jt-header-bg);padding-top:70px;padding-bottom:30px;position:fixed;left:0;right:0;top:0;bottom:0;width:auto}#navbar.d-block{opacity:0;transform:translateX(-20%)}#navbar.show{transform:translateX(0);opacity:1}#navbar .navbar-nav{max-height:100%;overflow-y:auto}#navbar-toggle:checked~#header-main #navbar{display:block}#navbar .nav-link{border-bottom:1px solid var(--jt-header-border);font-size:16px!important;color:var(--jt-dropdown-color)}#navbar .menu-item:hover>.nav-link{color:var(--jt-dropdown-hover)}#navbar .active>.nav-link{color:var(--jt-dropdown-selected)}#navbar .dropdown-toggle{border-left:1px solid var(--jt-header-border);height:2.5rem;padding:0 1rem;position:absolute;right:0;top:0}#navbar .dropdown-menu{background-color:var(--jt-dropdown-bg);border:none;padding-left:10px}#sidebar{border-top:1px solid var(--jt-border-light)}}@media (max-width:575.98px){.feature-posts .item-thumbnail{margin-bottom:-150px}.feature-posts .item-thumbnail a{border-radius:0!important;box-shadow:none!important;padding-bottom:75%}.feature-posts .item-content{background-color:var(--bs-body-bg);border:5px solid;border-radius:.25rem}#post-pager .prev-page+.next-page{border-top:1px solid}.full-width,.px-3 .google-auto-placed{margin-left:-1rem;margin-right:-1rem;width:auto!important}#footer-widget .widget{padding-left:3rem;padding-right:3rem}}
+
+.info{
+background-color: #ffff;
+text-align: left;
+margin-left: 0%;
+margin-top: 0%;
+padding-top: 76px;
+padding-left: 30px;
+}
+
+.hinfo{
+padding: 40px 0;
+}
+
+.info h1{
+ font-size: 3.375rem;
+    color: #000000;
+padding-bottom: 32px;
+max-width: 70%;
+font-weight: 400;
+font-family: 'Open Sans',sans-serif;
+}
+
+.btnp{
+margin-left: 10px;
+height: 56px;
+
+    animation: auto ease 0s 1 normal none running none;
+
+
+
+    background: #008553;
+    border-radius: 8px;
+    padding: 8px 40px;
+    display: inline-block;
+    border: none;
+    color: rgb(253, 253, 254);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btnp:hover{
+background: #00ab6b;
+}
+
+.long-placeholder{
+width: 70%;
+    border: 1px solid rgb(209, 219, 224);
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 56px;
+    padding: 17px 20px;
+    font-size: 14px;
+}
+ #iframeContainer {
+position: relative;
+display: none; /* Initially hide the container */
+    }
+
+    .overlayDiv {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #overlayTop {
+      top: 0;
+      background-color: #f2f2f2;
+      text-align: center;
+      line-height: 56px; /* Adjust this value for vertical alignment */
+    }
+
+    #overlayBottom {
+      bottom: 0;
+      background-color: #f2f2f2;
+    }
+
+    /* Media Query for screen width between 768px and 992px (tablet landscape) */
+@media (min-width: 768px) {
+#iframeContainer {
+height: 600px;
+}
+
+#overlayTop {
+height: 46px;
+}
+
+#overlayBottom {
+height: 40px;
+}
+}
+    /* Media Query for screen width less than 768px (mobile) */
+@media (max-width: 767px) {   
+#iframeContainer {
+height: 750px;
+}
+
+#overlayTop {
+height: 85px;
+}
+
+#overlayBottom {
+height: 40px;
+}
+}
+.info2 {
+background-color: #f1fdf7;
+    padding-bottom: 48px;
+    padding-top: 86px;
+    margin: 0;
+    width: 100%;
+    padding: 32px 32px 64px;
+}
+
+.info2 h2{
+    font-size: 28px;
+    line-height: 130%;
+    color: #404145;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+padding-bottom: 20px;
+}
+.info2 h3{
+font-size: 16px;
+    line-height: 140%;
+    color: #404145;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 700;
+padding-bottom: 8px;
+}
+.info2 span{
+margin-right: 10px;
+}
+.tbop{
+font-size: 18px;
+line-height: 26px;
+color: #62646a;
+}
+
+.sect1{
+background-color: #000000;
+padding: 64px 32px;
+gap: 32px;
+justify-content: space-between;
+display: grid;
+grid-template-columns: min(calc(var(--col-width) * 12), calc(100vw - 2 * var(--gutter))) auto;
+margin: auto;
+    max-width: min(calc(var(--col-width) * 22), calc(100vw - 2 * var(--gutter)));
+}
+
+.sect2 h2{
+font-size: 54px;
+color: #ffffff;
+}
+
+.sect2 a{
+color: rgb(255, 255, 255);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 16px 32px 20px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    border: 0px;
+    user-select: none;
+    transition: margin-top 200ms;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    background: #008553;
+    letter-spacing: -0.01em;
+margin-top: 10%;
+}
+
+.sect2 a:hover {
+margin-top: 8%;
+background: #00ab6b;
+}
+
+.contr1{
+padding: 64px 20px;
+}
+
+.text-gray-800 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+    --tw-text-opacity: 1;
+    color: rgb(45 45 45)
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    width: 100%;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.contr1 button {
+font-weight: 500!important;
+font-size: 1.25rem!important;
+font-family: sans-serif;
+}
+
+ @media (max-width: 600px) {
+.info h1{
+ font-size: 2.25rem;
+ max-width: 400px;
+}
+.info svg{
+ heigth: 30px;
+ width: 30px;
+}
+.btnp{
+ width: 95%;
+margin-left: 0px;
+margin-top: 12px;
+}
+.long-placeholder{
+ width: 95%;
+}
+
+.info2 {
+    padding: 24px 24px 48px;
+}
+.sect2 h2{
+font-size: 36px;
+max-width: 300px;
+}
+.sect2 a{
+font-size: 18px;
+padding: 14px 24px 16px
+}
+
+.text-gray-800 {
+    font-size: 32px;
+}
+}
+
+ @media (max-width: 430px) {
+.info{
+padding-top: 40px;
+padding-left: 20px
+}
+.info svg{
+ heigth: 26px;
+ width: 26px;
+}
+.sect2 a{
+font-size: 16px;
+}
+}
+
+]]></b:skin>
+<b:template-skin><![CDATA[
+
+]]></b:template-skin>
+  
+<b:defaultmarkups>
+<b:defaultmarkup type='Common'>
+<b:includable id='JetAll-head-content'>
+<meta expr:content='&quot;text/html; charset=&quot; + data:blog.encoding' http-equiv='Content-Type'/>
+<meta content='width=device-width,initial-scale=1' name='viewport'/>
+
+<!-- Primary Meta Tags -->
+<link expr:href='data:view.url.canonical' rel='canonical'/>
+<meta expr:content='data:view.url.canonical' property='og:url'/>
+<meta expr:content='data:blog.title + &quot; Team&quot;' name='author'/>
+<meta expr:content='data:blog.title' name='application-name'/>
+<meta expr:content='data:blog.adultContent ? &quot;adult&quot; : &quot;general&quot;' name='rating'/>
+      
+<!-- Favicon -->
+<b:if cond='data:skin.vars.favicon'>
+<b:with value='data:skin.vars.favicon' var='favicon'>
+<link expr:href='resizeImage(data:favicon,32,&quot;1:1&quot;)' rel='icon' sizes='32x32' type='image/png'/>
+<link expr:href='resizeImage(data:favicon,96,&quot;1:1&quot;)' rel='icon' sizes='96x96' type='image/png'/>
+<link expr:href='resizeImage(data:favicon,144,&quot;1:1&quot;)' rel='icon' sizes='144x144' type='image/png'/>
+<link expr:href='resizeImage(data:favicon,180,&quot;1:1&quot;)' rel='apple-touch-icon' type='image/png'/>
+<link expr:href='resizeImage(data:favicon,152,&quot;1:1&quot;)' rel='apple-touch-icon-precomposed' type='image/png'/>
+<meta expr:content='resizeImage(data:favicon,150,&quot;1:1&quot;)' name='msapplication-TileImage'/>
+</b:with>
+<b:else/>
+<link expr:href='data:blog.blogspotFaviconUrl' rel='icon' type='image/x-icon'/>
+</b:if>
+
+<!-- Theme Color -->
+<meta expr:content='data:skin.vars.body_background' name='theme-color'/>
+<meta expr:content='data:skin.vars.body_background' name='msapplication-TileColor'/>
+<meta expr:content='data:skin.vars.body_background' name='msapplication-navbutton-color'/>
+<meta expr:content='data:skin.vars.body_background' name='apple-mobile-web-app-status-bar-style'/>
+<meta content='yes' name='apple-mobile-web-app-capable'/>
+
+<!-- Title -->
+<b:with value='data:view.isHomepage ? data:blog.title + (data:skin.vars.tagline ? data:skin.vars.separator + data:skin.vars.tagline : &quot;&quot;) : data:view.isError ? &quot;404 (Error) Not Found&quot; + data:skin.vars.separator + data:blog.title : data:blog.pageName ? data:blog.pageName + data:skin.vars.separator + data:blog.title :  &quot;Latest Posts&quot; + data:skin.vars.separator + data:blog.title' var='meta_title'>
+<title><data:meta_title/></title>
+<meta expr:content='data:meta_title' name='title'/>
+<meta expr:content='data:meta_title' property='og:title'/>
+<meta expr:content='data:meta_title' name='twitter:title'/>
+</b:with>
+
+<!-- Image -->
+<b:with value='data:view.featuredImage ?: data:skin.vars.cover' var='meta_image'>
+<meta expr:content='data:meta_image' property='og:image'/>
+<meta expr:content='data:meta_image' name='twitter:image'/>
+</b:with>
+
+<!-- Description -->
+<b:with value='data:view.description ?: data:skin.vars.description' var='meta_desc'>
+<meta expr:content='data:meta_desc' name='description'/>
+<meta expr:content='data:meta_desc' property='og:description'/>
+<meta expr:content='data:meta_desc' name='twitter:description'/>
+</b:with>
+
+<!-- Open Graph / Facebook -->
+<meta content='' property='fb:app_id'/>
+<meta content='' property='article:author'/>
+<meta content='website' property='og:type'/>
+<meta expr:content='data:blog.locale' property='og:locale'/>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta expr:content='data:view.url.canonical' property='og:url'/>
+<meta expr:content='data:view.title' property='og:image:alt'/>
+
+<!-- Twitter -->
+<meta content='' name='twitter:site'/>
+<meta content='' name='twitter:creator'/>
+<meta content='summary_large_image' name='twitter:card'/>
+<meta expr:content='data:view.url.canonical' name='twitter:url'/>
+<meta expr:content='data:view.title' name='twitter:image:alt'/>
+
+<!-- Feed -->
+<data:blog.feedLinks/>
+
+<b:if cond='data:view.isHomepage'>
+<script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;url&quot;:&quot;<data:blog.canonicalHomepageUrl/>&quot;,&quot;name&quot;:&quot;<data:blog.title/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:blog.canonicalHomepageUrl/>search?q={search_term_string}&amp;max-results=10&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}}</script>
+</b:if>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' onload='if(media!=&quot;all&quot;)media=&quot;all&quot;' rel='stylesheet'/>
+</b:includable>
+</b:defaultmarkup>
+</b:defaultmarkups>
+</head>
+<body>
+
+<header class='header-animate sticky-top navbar py-0 navbar-expand-lg' content='itemid' id='header' itemid='#header' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
+<input class='d-none' id='navbar-toggle' type='checkbox'/>
+<b:section class='container-xxl position-relative px-3 flex-nowrap' id='header-main' maxwidgets='3' showaddelement='no'>
+  <b:widget id='HTML10' locked='true' title='Logo' type='HTML' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSxlb73KpiLeNNZTws9SMgvdHGqQm0LQCEAP2SGB55D6iS6amBCZVXNCV-KkcvhtA9d3smkJ3EEI4OkmGfkSqgaR5TaA8-QVxSGhbkyelZNvZR9mcNSy9O1dLPrYQqTZPDijScOvdyOxTJb5Dcsqi3S5iYX393RzUjOhFrHKRuIUdPQUlued4IT7fHNcI/s16000/scribdbl.png</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+        <b:include name='JetLogo'/>
+      </b:includable>
+  </b:widget>
+  <b:widget id='LinkList10' locked='true' title='Icons, Dark, Search' type='LinkList' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>NONE</b:widget-setting>
+      <b:widget-setting name='text-1'>instagram</b:widget-setting>
+      <b:widget-setting name='link-1'>#</b:widget-setting>
+      <b:widget-setting name='text-0'>facebook</b:widget-setting>
+      <b:widget-setting name='link-0'>#</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+      <b:include name='JetSearch'/>
+    </b:includable>
+    <b:includable id='content'/>
+  </b:widget>
+  <b:widget id='LinkList11' locked='true' title='Menu' type='LinkList' version='2' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='text-8'>Contact</b:widget-setting>
+      <b:widget-setting name='link-7'>/p/sitemap.html</b:widget-setting>
+      <b:widget-setting name='link-8'>/p/contact.html</b:widget-setting>
+      <b:widget-setting name='link-5'>#</b:widget-setting>
+      <b:widget-setting name='link-6'>#sub-end</b:widget-setting>
+      <b:widget-setting name='link-3'>#sub-start</b:widget-setting>
+      <b:widget-setting name='link-4'>#</b:widget-setting>
+      <b:widget-setting name='text-1'>About</b:widget-setting>
+      <b:widget-setting name='text-0'>Home</b:widget-setting>
+      <b:widget-setting name='text-3'>Sub Menu 1</b:widget-setting>
+      <b:widget-setting name='text-2'>Tech</b:widget-setting>
+      <b:widget-setting name='text-5'>DropDown</b:widget-setting>
+      <b:widget-setting name='text-4'>DropDown</b:widget-setting>
+      <b:widget-setting name='text-7'>Sitemap</b:widget-setting>
+      <b:widget-setting name='text-6'>Sub Menu 1</b:widget-setting>
+      <b:widget-setting name='sorting'>NONE</b:widget-setting>
+      <b:widget-setting name='link-1'>/p/about.html</b:widget-setting>
+      <b:widget-setting name='link-2'>/search/label/Tech?max-results=10</b:widget-setting>
+      <b:widget-setting name='link-0'>/</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+      <b:include name='JetMenu'/>
+    </b:includable>
+    <b:includable id='content'/>
+  </b:widget>
+</b:section>
+</header>  
+
+  <b:if cond='data:blog.url == data:blog.homepageUrl'>
+
+  
+  <div class='info' id='Get-Started'> 
+  <div class='container-mdp'>
+    
+     <div class='hinfo'>
+    <h1>Find the Document for <span class='color-change' style='color: rgb(0, 0, 0);'><strong>free <svg class='bi bi-coin' fill='currentColor' height='47' viewBox='0 0 16 16' width='47' xmlns='http://www.w3.org/2000/svg'><path d='M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z'/>
+  <path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/>
+  <path d='M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z'/>
+</svg>, </strong></span> <span class='color-change' style='color: rgb(0, 0, 0);'><strong>download it <svg class='bi bi-download' fill='currentColor' height='47' viewBox='0 0 16 16' width='47' xmlns='http://www.w3.org/2000/svg'><path d='M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z'/>
+  <path d='M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z'/>
+</svg>,</strong></span> and <span class='color-change' style='color: rgb(0, 0, 0);'><strong>read it </strong><svg class='bi bi-book' fill='currentColor' height='47' viewBox='0 0 16 16' width='47' xmlns='http://www.w3.org/2000/svg'><path d='M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z'/>
+</svg></span> right away. Do it together.</h1>
+
+    <input autocomplete='off' class='long-placeholder' id='scribdLink' placeholder='Document URL, eg: https://www.scribd.com/document/13953714/UI-Design' type='search' value=''/>
+
+        <button class='btnp' id='changeLink'>Get PDF</button>
+    <div id='errorMessage' style='color: red; display: none; text-align: center;'/>
+    
+    </div>
+     </div>
+    </div>
+  
+    <div id='iframeContainer'>
+      <div class='overlayDiv' id='overlayTop'>
+      <span id='pageTitle'/>
+      </div>
+      <iframe height='100%' id='scribdIframe' width='100%'/>
+      <div class='overlayDiv' id='overlayBottom'/>
+    </div>
+    
+  <div class='info2'>
+  <h2>Hassle-free way to access your favorite books and documents online. The best part? Everything.</h2>
+    <h3><span aria-hidden='true' class='glAQDp5 check-icon' style='width:24px;height:24px;fill:#7A7D85'><svg height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M8 1.75C4.54822 1.75 1.75 4.54822 1.75 8C1.75 11.4518 4.54822 14.25 8 14.25C11.4518 14.25 14.25 11.4518 14.25 8C14.25 4.54822 11.4518 1.75 8 1.75ZM0.25 8C0.25 3.71979 3.71979 0.25 8 0.25C12.2802 0.25 15.75 3.71979 15.75 8C15.75 12.2802 12.2802 15.75 8 15.75C3.71979 15.75 0.25 12.2802 0.25 8Z'/><path d='M11.5303 5.46967C11.8232 5.76256 11.8232 6.23744 11.5303 6.53033L7.53033 10.5303C7.23744 10.8232 6.76256 10.8232 6.46967 10.5303L4.46967 8.53033C4.17678 8.23744 4.17678 7.76256 4.46967 7.46967C4.76256 7.17678 5.23744 7.17678 5.53033 7.46967L7 8.93934L10.4697 5.46967C10.7626 5.17678 11.2374 5.17678 11.5303 5.46967Z'/></svg></span>Stay within your budget</h3>
+    <p class='tbop'>Discover a range of services, all tailored to fit your budget. No hidden fees or hourly rates, just straightforward And it&#39;s free.</p>
+    
+    <h3><span aria-hidden='true' class='glAQDp5 check-icon' style='width:24px;height:24px;fill:#7A7D85'><svg height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M8 1.75C4.54822 1.75 1.75 4.54822 1.75 8C1.75 11.4518 4.54822 14.25 8 14.25C11.4518 14.25 14.25 11.4518 14.25 8C14.25 4.54822 11.4518 1.75 8 1.75ZM0.25 8C0.25 3.71979 3.71979 0.25 8 0.25C12.2802 0.25 15.75 3.71979 15.75 8C15.75 12.2802 12.2802 15.75 8 15.75C3.71979 15.75 0.25 12.2802 0.25 8Z'/><path d='M11.5303 5.46967C11.8232 5.76256 11.8232 6.23744 11.5303 6.53033L7.53033 10.5303C7.23744 10.8232 6.76256 10.8232 6.46967 10.5303L4.46967 8.53033C4.17678 8.23744 4.17678 7.76256 4.46967 7.46967C4.76256 7.17678 5.23744 7.17678 5.53033 7.46967L7 8.93934L10.4697 5.46967C10.7626 5.17678 11.2374 5.17678 11.5303 5.46967Z'/></svg></span>Access high-quality content instantly</h3>
+    <p class='tbop'>Download your desired documents within minutes. Thanks to our vast collection, you&#39;ll always find what you&#39;re looking for.</p>
+    
+    <h3><span aria-hidden='true' class='glAQDp5 check-icon' style='width:24px;height:24px;fill:#7A7D85'><svg height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M8 1.75C4.54822 1.75 1.75 4.54822 1.75 8C1.75 11.4518 4.54822 14.25 8 14.25C11.4518 14.25 14.25 11.4518 14.25 8C14.25 4.54822 11.4518 1.75 8 1.75ZM0.25 8C0.25 3.71979 3.71979 0.25 8 0.25C12.2802 0.25 15.75 3.71979 15.75 8C15.75 12.2802 12.2802 15.75 8 15.75C3.71979 15.75 0.25 12.2802 0.25 8Z'/><path d='M11.5303 5.46967C11.8232 5.76256 11.8232 6.23744 11.5303 6.53033L7.53033 10.5303C7.23744 10.8232 6.76256 10.8232 6.46967 10.5303L4.46967 8.53033C4.17678 8.23744 4.17678 7.76256 4.46967 7.46967C4.76256 7.17678 5.23744 7.17678 5.53033 7.46967L7 8.93934L10.4697 5.46967C10.7626 5.17678 11.2374 5.17678 11.5303 5.46967Z'/></svg></span>No surprises, guaranteed</h3>
+    <p class='tbop'>With Scribd Download, you&#39;ll never be caught off guard. You&#39;ll never see a payment request, it&#39;s on the house.</p>
+    
+    <h3><span aria-hidden='true' class='glAQDp5 check-icon' style='width:24px;height:24px;fill:#7A7D85'><svg height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M8 1.75C4.54822 1.75 1.75 4.54822 1.75 8C1.75 11.4518 4.54822 14.25 8 14.25C11.4518 14.25 14.25 11.4518 14.25 8C14.25 4.54822 11.4518 1.75 8 1.75ZM0.25 8C0.25 3.71979 3.71979 0.25 8 0.25C12.2802 0.25 15.75 3.71979 15.75 8C15.75 12.2802 12.2802 15.75 8 15.75C3.71979 15.75 0.25 12.2802 0.25 8Z'/><path d='M11.5303 5.46967C11.8232 5.76256 11.8232 6.23744 11.5303 6.53033L7.53033 10.5303C7.23744 10.8232 6.76256 10.8232 6.46967 10.5303L4.46967 8.53033C4.17678 8.23744 4.17678 7.76256 4.46967 7.46967C4.76256 7.17678 5.23744 7.17678 5.53033 7.46967L7 8.93934L10.4697 5.46967C10.7626 5.17678 11.2374 5.17678 11.5303 5.46967Z'/></svg></span>Reliable support around the clock</h3>
+    <p class='tbop'>Our dedicated support team is available 24/7, ready to assist you whenever and wherever you need help.</p>
+  </div>
+  
+  <div class='accordion fs-5 fw-normal contr1' id='accordionPanelsStayOpenExample'>
+    
+    <h2 class='text-gray-800 text-center'>Frequently Asked Questions</h2>
+  <div class='accordion-item'>
+    <h2 class='accordion-header'>
+      <button aria-controls='collapseOne' aria-expanded='false' class='accordion-button collapsed' data-bs-target='#collapseOne' data-bs-toggle='collapse' type='button'>
+        What is a Scribd downloader?
+      </button>
+    </h2>
+    <div class='accordion-collapse collapse' data-bs-parent='#accordionExample' id='collapseOne'>
+      <div class='accordion-body'>
+       A Scribd downloader is a tool or service that allows users to download documents, books, and other content from the Scribd platform to their local devices for offline access.
+      </div>
+    </div>
+  </div>
+  <div class='accordion-item'>
+    <h2 class='accordion-header'>
+      <button aria-controls='collapseTwo' aria-expanded='false' class='accordion-button collapsed' data-bs-target='#collapseTwo' data-bs-toggle='collapse' type='button'>
+         Is using a Scribd downloader legal?
+      </button>
+    </h2>
+    <div class='accordion-collapse collapse' data-bs-parent='#accordionExample' id='collapseTwo'>
+      <div class='accordion-body'>
+        The legality of using a Scribd downloader can vary depending on local copyright laws and Scribd&#39;s terms of service. Some downloaders may infringe on copyright if used to download copyrighted content without permission. Users should always respect copyright laws.
+      </div>
+    </div>
+  </div>
+  <div class='accordion-item'>
+    <h2 class='accordion-header'>
+      <button aria-controls='collapseThree' aria-expanded='false' class='accordion-button collapsed' data-bs-target='#collapseThree' data-bs-toggle='collapse' type='button'>
+        Are there free Scribd downloaders available?
+      </button>
+    </h2>
+    <div class='accordion-collapse collapse' data-bs-parent='#accordionExample' id='collapseThree'>
+      <div class='accordion-body'>
+        Yes, there are both free and paid Scribd downloaders available. Some offer limited features for free, while others provide advanced options for a fee.
+      </div>
+    </div>
+  </div>
+    <div class='accordion-item'>
+    <h2 class='accordion-header'>
+      <button aria-controls='collapseFour' aria-expanded='false' class='accordion-button collapsed' data-bs-target='#collapseFour' data-bs-toggle='collapse' type='button'>
+        How do I use a Scribd downloader?
+      </button>
+    </h2>
+    <div class='accordion-collapse collapse' data-bs-parent='#accordionExample' id='collapseFour'>
+      <div class='accordion-body'>
+        Typically, you would need to copy and paste the URL of the Scribd document you want to download into the downloader tool or service. The downloader then fetches the document and allows you to save it to your device.
+      </div>
+    </div>
+  </div>
+    <div class='accordion-item'>
+    <h2 class='accordion-header'>
+      <button aria-controls='collapseFive' aria-expanded='false' class='accordion-button collapsed' data-bs-target='#collapseFive' data-bs-toggle='collapse' type='button'>
+         Can I download any document from Scribd?
+      </button>
+    </h2>
+    <div class='accordion-collapse collapse' data-bs-parent='#accordionExample' id='collapseFive'>
+      <div class='accordion-body'>
+        Not necessarily. Some documents on Scribd may have download restrictions set by the document&#39;s author or publisher, making them unavailable for download. It depends on the document&#39;s settings.
+      </div>
+    </div>
+  </div>
+    <div class='accordion-item'>
+    <h2 class='accordion-header'>
+      <button aria-controls='collapseSix' aria-expanded='false' class='accordion-button collapsed' data-bs-target='#collapseSix' data-bs-toggle='collapse' type='button'>
+        Are downloaded Scribd documents accessible offline?
+      </button>
+    </h2>
+    <div class='accordion-collapse collapse' data-bs-parent='#accordionExample' id='collapseSix'>
+      <div class='accordion-body'>
+        Yes, once you&#39;ve downloaded a document, you can access it offline on your device, as long as it&#39;s saved locally.
+      </div>
+    </div>
+  </div>
+    <div class='accordion-item'>
+    <h2 class='accordion-header'>
+      <button aria-controls='collapseSeven' aria-expanded='false' class='accordion-button collapsed' data-bs-target='#collapseSeven' data-bs-toggle='collapse' type='button'>
+        Are there risks associated with using Scribd downloaders?
+      </button>
+    </h2>
+    <div class='accordion-collapse collapse' data-bs-parent='#accordionExample' id='collapseSeven'>
+      <div class='accordion-body'>
+        There can be risks, including potential copyright infringement or the use of unreliable third-party tools. Users should be cautious and ensure they have the right to download content.
+      </div>
+    </div>
+  </div>
+    <div class='accordion-item'>
+    <h2 class='accordion-header'>
+      <button aria-controls='collapseEight' aria-expanded='false' class='accordion-button collapsed' data-bs-target='#collapseEight' data-bs-toggle='collapse' type='button'>
+         What happens if I encounter a document that can&#39;t be downloaded?
+      </button>
+    </h2>
+    <div class='accordion-collapse collapse' data-bs-parent='#accordionExample' id='collapseEight'>
+      <div class='accordion-body'>
+        If a document has download restrictions, you won&#39;t be able to download it using a Scribd downloader. In such cases, you may need to contact the document&#39;s author or publisher for access.
+      </div>
+    </div>
+  </div>
+</div>
+  
+ 
+  </b:if>
+    
+
+<script>/*<![CDATA[*/
+ var spans = document.querySelectorAll(".color-change");
+        var currentIndex = 0;
+        var colors = ["#ab006b", "#6b00ab", "#ab6b00"];
+
+        function changeColor() {
+            spans[currentIndex].style.color = colors[currentIndex];
+            spans.forEach((span, index) => {
+                if (index !== currentIndex) {
+                    span.style.color = "rgb(0, 0, 0)";
+                }
+            });
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+
+        setInterval(changeColor, 2000);
+
+// Function to parse document number and title from the current URL
+  function parseURLParameters() {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.has('doc') && params.has('title')) {
+      const documentNumber = params.get('doc');
+      const pageTitle = params.get('title');
+
+      // Update the input field with the title
+      const inputLink = `https://www.scribd.com/document/${documentNumber}/${pageTitle}`;
+      document.getElementById('scribdLink').value = inputLink;
+
+      // Update the page title without hyphens
+      const cleanTitle = pageTitle.replace(/-/g, ' ');
+      document.getElementById('pageTitle').textContent = cleanTitle;
+
+      // Update the iframe source
+      const iframe = document.getElementById('scribdIframe');
+      iframe.src = `https://www.scribd.com/embeds/${documentNumber}/content`;
+
+      // Display the iframe container since the iframe source is set
+      document.getElementById('iframeContainer').style.display = 'block';
+    }
+  }
+
+  // Handle the "Change Link" button click event
+  document.getElementById('changeLink').addEventListener('click', () => {
+    const inputLink = document.getElementById('scribdLink').value;
+    
+    if (isValidScribdLink(inputLink)) {
+      // Valid Scribd link format
+      updateIframeAndWebsiteLink(inputLink);
+
+      // Update the browser's address bar with the new URL
+      const { documentNumber, pageTitle } = parseScribdLink(inputLink);
+      const myWebsiteLink = `https://scribdvpdf.blogspot.com/?doc=${documentNumber}&title=${pageTitle}`;
+      window.history.pushState({}, null, myWebsiteLink); // Update URL without refreshing the page
+    } else {
+      // Invalid link format or empty input
+      displayErrorMessage("This type of doc is not supported or please enter a valid Scribd link.");
+    }
+  });
+
+  // Function to check if the input is a valid Scribd link
+  function isValidScribdLink(inputLink) {
+    // Regular expression to match the expected Scribd link format
+    const scribdLinkPattern = /^https:\/\/www\.scribd\.com\/document\/\d+\/[\w-]+$/;
+    return scribdLinkPattern.test(inputLink);
+  }
+
+  // Function to display an error message
+  function displayErrorMessage(message) {
+    const errorMessageDiv = document.getElementById('errorMessage');
+    errorMessageDiv.textContent = message;
+    errorMessageDiv.style.display = 'block';
+  }
+
+  // Function to parse document number and title from the Scribd link
+  function parseScribdLink(inputLink) {
+    const parts = inputLink.split('/');
+    const documentNumber = parts[parts.length - 2];
+    const pageTitle = parts[parts.length - 1];
+    return { documentNumber, pageTitle };
+  }
+
+  // Function to update the iframe source and custom website link
+  function updateIframeAndWebsiteLink(inputLink) {
+    const { documentNumber, pageTitle } = parseScribdLink(inputLink);
+
+    // Update the iframe source
+    const iframe = document.getElementById('scribdIframe');
+    iframe.src = `https://www.scribd.com/embeds/${documentNumber}/content`;
+
+    // Update the page title without hyphens
+    const cleanTitle = pageTitle.replace(/-/g, ' ');
+    document.getElementById('pageTitle').textContent = cleanTitle;
+
+    // Display the iframe container since the iframe source is set
+    document.getElementById('iframeContainer').style.display = 'block';
+  }
+
+  // Call the function to parse the URL parameters on page load
+  window.onload = parseURLParameters;
+/*]]>*/</script>
+  
+
+  
+    
+  <section class='sect1'><div class='sect2'><h2>Start <strong style='opacity: 1;'>aligning</strong><br/> with Scribdvpdf</h2>
+    <a behavior='startup' expr:href='data:view.isHomepage ? &quot;#Get-Started&quot; : &quot;/#Get&quot;' expr:target='data:view.isHomepage ? &quot;&quot; : &quot;_blank&quot;' href='/' location='outro'>Get started for free</a></div></section>
+  
+  <div class='bg-black'>
+  <div class='container-lg bg-15 call'>
+  <footer class='py-4' itemid='#footer' itemscope='itemscope' itemtype='https://schema.org/WPFooter'>
+    <div class='row'>
+      <div class='col-md-5 mb-3'>
+       <a aria-current='page' class='' href='/'><img alt='Scribdvpdf logo' class='h-20' height='32' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqz28yQUEUb4irEpxalWBZsQhQdgevTJ3JMj1X_6ci8CXOH_S4FVn0MR0JnNj0UK8LTH6DMVvPP7wbCTvc2dRdUHoR782fusJyCdLpHhyphenhyphent5wb-uKadX6BXTpQr3FeDSH0Yt8VjDmtESIzWWkd6xBC1RSVw_SiCYefxXFplGx5gxiH9BVRgP7aA21NAnGs/s16000/scribdlo.png' width='180'/></a><div class='text-white mb-3 mt-3'>Access high-quality content instantly, Download your desired documents within minutes. Thanks to our vast collection, you&#39;ll always find what you&#39;re looking for.</div>
+        <div class='text-white-50'>
+      <ul class='list-unstyled d-flex'>
+        <li class='me-3 py-2'><a aria-label='DoScribd on Twitter - opens in new tab' class='link-body-emphasis' href='/' rel='noopener' target='_blank'><svg class='bi bi-twitter-x' fill='currentColor' height='24' style='color: #ffffff' viewBox='0 0 16 16' width='24' xmlns='http://www.w3.org/2000/svg'>
+  <path d='M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z'/></svg></a></li>
+        
+        <li class='me-3 py-2'><a aria-label='DoScribd on Facebook - opens in new tab' class='link-body-emphasis' href='/' rel='noopener' target='_blank'><svg class='bi bi-facebook' fill='currentColor' height='24' style='color: #ffffff' viewBox='0 0 16 16' width='24' xmlns='http://www.w3.org/2000/svg'>
+  <path d='M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z'/></svg></a></li>
+        
+        <li class='me-3 py-2'><a aria-label='DoScribd on Github - opens in new tab' class='link-body-emphasis' href='#' rel='noopener' target='_blank'><svg class='bi bi-github' fill='currentColor' height='24' style='color: #ffffff' viewBox='0 0 16 16' width='24' xmlns='http://www.w3.org/2000/svg'>
+  <path d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'/></svg></a></li>
+        
+        <li class='me-3 py-2'><a aria-label='DoScribd on Telegram - opens in new tab' class='link-body-emphasis' href='#' rel='noopener' target='_blank'><svg class='bi bi-telegram' fill='currentColor' height='24' style='color: #ffffff' viewBox='0 0 16 16' width='24' xmlns='http://www.w3.org/2000/svg'>
+  <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z'/></svg></a></li>
+      </ul>
+        </div>
+      </div>
+
+      <div class='col-6 col-md-2 mb-3 text-white'>
+        <h3>Discover</h3>
+        <ul class='nav nap flex-column'>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/search/label/Blog'>Blog</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/whats-new.html'>What&#39;s new</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/partners.html'>Partners</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/careers.html'>Careers</a></li>
+        </ul>
+      </div>
+
+      <div class='col-6 col-md-2 mb-3 text-white'>
+        <h3>Legal</h3>
+        <ul class='nav flex-column'>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/privacy-policy.html'>Privacy Policy</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/terms-of-use.html'>Terms of Use</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/cookies-policy.html'>Cookie Use</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/faqs.html'>FAQs</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/donate.html'>Donate</a></li>
+        </ul>
+      </div>
+
+    <div class='col-6 col-md-2 mb-3 text-white'>
+        <h3>Support</h3>
+        <ul class='nav flex-column'>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/contact.html'>Contact us</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='/p/about-us.html'>About us</a></li>
+          <li class='nav-item mb-2'><a class='nav-link p-0 text-white-50 hover-text-primary' href='#'>Help</a></li>
+          </ul>
+      </div>
+      
+    </div>
+<div class='d-flex flex-column flex-sm-row justify-content-between py-0 my-4 border-top'/>
+    <div class='col-md-4 d-flex mt-0 align-items-left'>
+      
+      
+      <p class='text-center text-light'>&#169; 2023 Scribdvpdf, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+    </div>
+  
+    <script crossorigin='anonymous' integrity='sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm' src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js'/>
+</body>
+</html>

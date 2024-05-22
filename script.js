@@ -11,7 +11,6 @@
             });
             currentIndex = (currentIndex + 1) % colors.length;
         }
-
         setInterval(changeColor, 2000);
 
 // Function to parse document number and title from the current URL

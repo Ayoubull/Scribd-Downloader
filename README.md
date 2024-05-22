@@ -36,7 +36,6 @@ please add style script a line 6 , remplaced a this
 # Scribdvpdf v1.2 Style #
 ---------------------------
 
-
 ]]></b:skin>
 ```
 and remlace js script a line 310
